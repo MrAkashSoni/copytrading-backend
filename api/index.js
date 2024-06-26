@@ -21,6 +21,8 @@ wss.on('connection', (ws) => {
 
 app.use(express.json());
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 app.post('/api/trade', async (req, res) => {
   try {
     // Broadcast status: Connected to Backend
